@@ -1,4 +1,4 @@
-# DjangoPowerShellInstaller
+# Django PowerShell Automatic Installer
 Automatic Django PowerShell Installer
 
 I created an automatic script for installing Django in Windows PowerShell.
