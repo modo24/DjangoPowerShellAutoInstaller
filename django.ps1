@@ -21,7 +21,7 @@ if (-not(Get-Command 'python' -errorAction SilentlyContinue)) {
     break
 
 } elseif ($name.length -gt 30) {
-    Write-Host "Error: The name ""$name"" is greater than 30 characters. Please try another name." -ForegroundColor "Red";
+    Write-Host "Error: The name '$name' is greater than 30 characters. Please try another name." -ForegroundColor "Red";
     break  
 
 } else {
