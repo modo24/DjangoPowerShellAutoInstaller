@@ -1,7 +1,7 @@
 param($name, $username)
 $CurrentPath = Get-Location
 $NewFolder = "$CurrentPath\$name" 
-$ForbiddenNames = 'asgiref', 'Django', 'sqlparse', 'tzdata2'
+$ForbiddenNames = 'asgiref', 'Django', 'sqlparse', 'tzdata'
 
 if (-not(Get-Command 'python' -errorAction SilentlyContinue)) {
     Write-Host "You must install Python first. You can download the latest stable Python version from https://www.python.org/downloads/" -ForegroundColor "Red";
