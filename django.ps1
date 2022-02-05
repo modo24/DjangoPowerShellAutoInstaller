@@ -52,7 +52,11 @@ if (-not(Get-Command 'python' -errorAction SilentlyContinue)) {
     Write-Host "Enter superuser credentials:"
     if ($null -eq $username) {
         Do {
-            $username = Read-Host -Prompt "Username"                            
+            $username = Read-Host -Prompt "Username" 
+            if (-not($username -match '^[\w.@+-]+$')) {            
+                Write-Host "Error: Enter a valid username. This value may contain only letters, numbers, and @/./+/-/_ characters." -ForegroundColor "Red";                
+                $username = Read-Host -Prompt "Username" 
+            }                                        
         } Until ($username)       
     }      
     
